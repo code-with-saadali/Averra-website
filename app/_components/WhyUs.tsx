@@ -231,9 +231,9 @@ export default function WhyUs() {
 
         {/* GRID */}
         <div className="flex flex-col gap-3">
-          <Row items={row1} move={moveRight} />
-          <Row items={row2} move={moveLeft} />
-          <Row items={row3} move={moveRight} />
+          <Row items={row1} move={moveLeft} />
+          <Row items={row2} move={moveRight} />
+          <Row items={row3} move={moveLeft} />
         </div>
       </div>
     </div>
