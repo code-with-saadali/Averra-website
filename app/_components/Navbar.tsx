@@ -85,7 +85,7 @@ export default function Navbar() {
       >
         {/* CENTER LINKS */}
         <div className="flex flex-1 items-center justify-center">
-          <div className="flex flex-col items-center tracking-[-0.02em] text-[60px] md:text-[70px] font-semibold leading-[1.05]">
+          <div className="flex flex-col items-center tracking-[-0.02em] text-[70px] font-semibold leading-[1.05]">
             {["Home", "Studio", "Projects", "Blog", "Contact"].map((item) => (
               <Link
                 key={item}
