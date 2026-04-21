@@ -24,7 +24,7 @@ export default function Navbar() {
     <>
       {/* NAVBAR */}
       <div className="fixed top-4 left-0 w-full z-50 flex justify-center">
-        <div className="w-[95%] backdrop-blur-md bg-white rounded-2xl px-6 py-2.5 flex items-center justify-between">
+        <div className="w-[95%] backdrop-blur-md bg-white rounded-2xl px-6 py-2.5 flex items-center justify-between min-[1920px]:max-w-7xl mx-auto">
 
           {/* Logo */}
           <Link href="/" className="text-[19px] font-medium tracking-tighter z-50">
@@ -85,13 +85,13 @@ export default function Navbar() {
       >
         {/* CENTER LINKS */}
         <div className="flex flex-1 items-center justify-center">
-          <div className="flex flex-col items-center tracking-[-0.02em] text-[70px] font-semibold leading-[1.05]">
+          <div className="flex flex-col items-center tracking-[-0.02em] text-[60px] md:text-[70px] font-semibold leading-[1.05]">
             {["Home", "Studio", "Projects", "Blog", "Contact"].map((item) => (
               <Link
                 key={item}
                 href={`/${item.toLowerCase()}`}
                 onClick={() => setOpen(false)}
-                className="group relative overflow-hidden h-20"
+                className="group relative overflow-hidden h-full "
               >
                 <span className="block transition-transform duration-300 group-hover:-translate-y-full">
                   {item}

@@ -105,11 +105,15 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
   const text = (
     <div className="relative flex flex-col justify-between bg-white px-4 py-6 w-full md:w-[30%] rounded-2xl overflow-hidden">
+      
+      {/* animated dashed border */}
+      <div className="pointer-events-none absolute inset-0 rounded-2xl border border-dashed border-black opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
       <div className="relative z-10">
         <h2 className="text-lg md:text-xl tracking-tighter font-semibold text-black mb-2">
           {project.title}
         </h2>
-        <p className="text-sm text-gray-500 leading-snug">
+        <p className="text-sm text-gray-500 leading-snug md:leading-relaxed">
           {project.description}
         </p>
       </div>
@@ -125,7 +129,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
   return (
     <div className="group flex flex-col md:flex-row gap-2 overflow-hidden">
-      {/* 📱 MOBILE FIXED ORDER */}
+      
       <div className="flex flex-col md:hidden gap-2">
         {image}
         {text}
