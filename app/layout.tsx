@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "./_components/LenisProvider";
 import Navbar from "./_components/Navbar";
+import Noise from "./_components/Noise";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Noise
+          patternSize={250}
+          patternScaleX={2}
+          patternScaleY={2}
+          patternRefreshInterval={2}
+          patternAlpha={10}
+          excludeSelector="#hero-section"
+        />
         <LenisProvider>
           <Navbar />
           {children}
